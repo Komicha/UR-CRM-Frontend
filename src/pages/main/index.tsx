@@ -1,5 +1,28 @@
+import styled from "styled-components";
+import Account from "../../components/Account";
+import Project from "components/Project";
+
+const StyledMain = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+const StyledProjects = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+`;
+
+
 const Main = () => {
-  return <div>main</div>;
+    return (
+        <StyledMain>
+            <Account />
+            <StyledProjects>
+                <Project />
+                <Project />
+            </StyledProjects>
+        </StyledMain>
+    );
 };
 
 export default Main;
