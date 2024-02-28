@@ -3,7 +3,7 @@ import UserPic from "../static/img/UserPic.png"
 
 const StyledContainer = styled.div`
 margin: 0px auto;
-width: 343px;
+
 padding: 0px 19px;
 `;
 

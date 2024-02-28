@@ -2,6 +2,11 @@
 import styled from "styled-components";
 import ProgressBar from "./ProgressBar";
 
+const StyledContainer = styled.div`
+margin: 0px auto;
+
+padding: 0px 19px;
+`;
 
 const StyledProject = styled.div`
     display: flex;
@@ -23,12 +28,15 @@ const StyledNameProject = styled.h2`
 
 const Project = () => {
     return (
-        <StyledProject>
-            <StyledNameProject>
-                Разработка платформы для оптовых продаж
-            </StyledNameProject>
-            <ProgressBar />
-        </StyledProject>
+        <StyledContainer>
+            <StyledProject>
+                <StyledNameProject>
+                    Разработка платформы для оптовых продаж
+                </StyledNameProject>
+                <ProgressBar />
+            </StyledProject>
+        </StyledContainer>
+
 
     );
 }

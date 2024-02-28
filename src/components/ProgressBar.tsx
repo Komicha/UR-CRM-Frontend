@@ -6,14 +6,20 @@ const StyledWrapper = styled.div`
     gap: 10px;
     width: 100%;
 `;
+
 const StyledProgressBar = styled.div`
     width: 268px;
     height: 14px;
-    border-radius: 10px;
+    border-radius: 7px;
+    border: 1px solid;
     background-color: transporent;
 `;
 const StyledProgressBarFill = styled.div`
-    
+    border-radius: 10px;
+    height:5px;
+    width: 100%;
+    margin: 2px 2px;
+    background-color: #FFFFFF;
 `;
 const StyledProgressLabel = styled.div`
     
@@ -21,10 +27,11 @@ const StyledProgressLabel = styled.div`
 
 const ProgressBar = () => {
     return (
+
         <StyledWrapper>
             <StyledProgressBar>
                 <StyledProgressBarFill>
-                    progress bar
+
                 </StyledProgressBarFill>
             </StyledProgressBar>
             <StyledProgressLabel>
