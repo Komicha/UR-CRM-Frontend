@@ -1,5 +1,5 @@
+import { useState } from "react";
 import styled from "styled-components";
-
 const StyledWrapper = styled.div`
     display: flex;
     flex-direction: row;
@@ -8,11 +8,13 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledProgressBar = styled.div`
+    display: flex;
+    align-items:center;
     width: 268px;
-    height: 14px;
+    height: 13px;
     border-radius: 7px;
     border: 1px solid;
-    background-color: transporent;
+    
 `;
 const StyledProgressBarFill = styled.div`
     border-radius: 10px;
@@ -20,22 +22,26 @@ const StyledProgressBarFill = styled.div`
     width: 100%;
     margin: 2px 2px;
     background-color: #FFFFFF;
+    transition: width 0.5 ease-out;
 `;
 const StyledProgressLabel = styled.div`
     
 `;
 
 const ProgressBar = () => {
+    const [progress, setProgress] = useState(0);
+
+
     return (
 
         <StyledWrapper>
             <StyledProgressBar>
-                <StyledProgressBarFill>
+                <StyledProgressBarFill style={{ width: `${progress}%` }}>
 
                 </StyledProgressBarFill>
             </StyledProgressBar>
             <StyledProgressLabel>
-                40%
+                {progress}
             </StyledProgressLabel>
         </StyledWrapper>
 

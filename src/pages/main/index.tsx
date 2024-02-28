@@ -5,6 +5,7 @@ import Project from "components/Project";
 const StyledMain = styled.div`
     display: flex;
     flex-direction: column;
+    gap: 17px;
 `;
 const StyledProjects = styled.div`
     display: flex;
@@ -18,6 +19,7 @@ const Main = () => {
         <StyledMain>
             <Account />
             <StyledProjects>
+                <Project />
                 <Project />
                 <Project />
             </StyledProjects>
