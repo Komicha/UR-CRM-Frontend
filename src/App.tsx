@@ -1,9 +1,4 @@
-import {
-  createBrowserRouter,
-  BrowserRouter,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Main from "./pages/main";
 import ProjectTasks from "./pages/project-tasks";

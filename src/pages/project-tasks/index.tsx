@@ -1,5 +1,11 @@
+import Header from "components/Header";
+
 const ProjectTasks = () => {
-  return <div>project-tasks</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
 
 export default ProjectTasks;
