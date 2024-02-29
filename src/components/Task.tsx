@@ -4,6 +4,23 @@ import styled from "styled-components";
 import AvatarIMG from "static/img/avatar.png";
 import ArrowSVG from "static/svg/arrow.svg";
 
+import DotsFullSVG from "static/svg/dots-full.svg";
+import DotsMiddleSVG from "static/svg/dots-middle.svg";
+import DotsLowSVG from "static/svg/dots-low.svg";
+
+const handleDotsState = (state: string) => {
+  switch (state) {
+    case "full":
+      return DotsFullSVG;
+    case "middle":
+      return DotsMiddleSVG;
+    case "low":
+      return DotsLowSVG;
+    default:
+      return DotsLowSVG;
+  }
+};
+
 const StyledContainer = styled.div`
   height: 136px;
   width: 100%;
@@ -13,6 +30,12 @@ const StyledContainer = styled.div`
   border-left: 8px solid white;
   padding: 16px;
   box-sizing: border-box;
+`;
+
+const StyledTitleWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const StyledTitle = styled.div`
@@ -60,10 +83,26 @@ const StyledArrow = styled.div`
   background-size: cover;
 `;
 
-const Task = () => {
+const StyledDots = styled.div<{ state: string }>`
+  width: 30px;
+  height: 10px;
+  background-image: url("${(props) => handleDotsState(props.state)}");
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
+
+type Props = {
+  taskState: string;
+};
+
+const Task = (props: Props) => {
   return (
     <StyledContainer>
-      <StyledTitle>Подготовить отчет</StyledTitle>
+      <StyledTitleWrapper>
+        <StyledTitle>Подготовить отчет</StyledTitle>
+        <StyledDots state={props.taskState} />
+      </StyledTitleWrapper>
+
       <StyledDescription>
         Повседневная практика показывает, что рамки и место обучения кадров
         12321321312321213321312321213213421 421421
