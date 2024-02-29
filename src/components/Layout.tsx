@@ -9,7 +9,6 @@ type Props = {
 
 const StyledContainer = styled.main`
   margin: 0px auto;
-  width: 382px;
   padding: 0px 19px;
   box-sizing: border-box;
 `;
