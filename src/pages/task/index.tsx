@@ -28,7 +28,7 @@ const StyledWrapperBtn = styled.div`
 
 const StyledContainer = styled.div`
 
-`;
+`
 
 const Task = () => {
     return (

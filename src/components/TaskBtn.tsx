@@ -2,6 +2,11 @@ import styled from "styled-components";
 import ArrowSVG from "static/svg/arrow.svg";
 
 const StyledBtn = styled.button`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     width: 343px;
     height: 44px;
     border-radius: 6px;
@@ -29,7 +34,6 @@ const TaskBtn = ({ title }: { title: string }) => {
             <StyledBtn>
                 {title}
                 <StyledArrow />
-
             </StyledBtn>
         </StyledWrapper>
 
