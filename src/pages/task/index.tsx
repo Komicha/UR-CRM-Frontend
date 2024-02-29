@@ -14,6 +14,7 @@ const StyledTaskInfo = styled.div`
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-top: 20px;
 `;
 
 const StyledWrapperBtn = styled.div`
