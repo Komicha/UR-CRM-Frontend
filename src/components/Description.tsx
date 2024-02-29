@@ -1,0 +1,55 @@
+import styled from "styled-components";
+
+const StyledDescriptionText = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    padding: 14px;
+    background-color: #19212B;
+    border-radius: 6px;
+`;
+const StyledDescriptionTitle = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+
+    font-family: Inter;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 13px;
+    letter-spacing: 0em;
+    text-align: left;
+
+`;
+
+const StyledBtn = styled.button`
+    border: none;
+    width: 16px;
+    height: 16px;
+`;
+const Description = () => {
+    return (
+
+
+        <StyledDescriptionText>
+            <StyledDescriptionTitle>
+                <StyledBtn>
+
+                </StyledBtn>
+                Описание:
+            </StyledDescriptionTitle>
+            Повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет оценить значение новых предложений. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности позволяет оценить значение модели развития.
+        </StyledDescriptionText>
+
+    );
+}
+
+export default Description;

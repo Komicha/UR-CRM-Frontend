@@ -1,18 +1,20 @@
-
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ProgressBar from "./ProgressBar";
 
 
 
-const StyledProject = styled.div`
+const StyledLink = styled(Link)`
     display: flex;
     background-color: #19212B;
     flex-direction: column;
     gap: 20px;
     padding: 19px 18px;
-    border-radius: 15px
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
 `;
-const StyledNameProject = styled.h2`
+const StyledNameProject = styled.div`
 font-family: Inter;
 font-size: 17px;
 font-weight: 600;
@@ -28,12 +30,14 @@ text-align: left;
 const Project = () => {
     return (
 
-        <StyledProject>
+        <StyledLink to="/project-tasks">
             <StyledNameProject>
                 Разработка платформы для оптовых продаж
             </StyledNameProject>
             <ProgressBar />
-        </StyledProject>
+        </StyledLink>
+
+
 
 
 

@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Main from "./pages/main";
 import ProjectTasks from "./pages/project-tasks";
+import Task from "./pages/task";
 import styled from "styled-components";
 import { useEffect } from "react";
 
@@ -23,6 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/project-tasks" element={<ProjectTasks />} />
+          <Route path="/task" element={<Task />} />
         </Routes>
       </BrowserRouter>
     </StyledContainer>

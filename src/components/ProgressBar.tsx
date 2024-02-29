@@ -5,6 +5,7 @@ const StyledWrapper = styled.div`
     flex-direction: row;
     gap: 10px;
     width: 100%;
+    align-items: center;
 `;
 
 const StyledProgressBar = styled.div`
@@ -41,7 +42,7 @@ const ProgressBar = () => {
                 </StyledProgressBarFill>
             </StyledProgressBar>
             <StyledProgressLabel>
-                {progress}
+                {progress}%
             </StyledProgressLabel>
         </StyledWrapper>
 
