@@ -5,38 +5,40 @@ import TaskBtn from "components/TaskBtn";
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 100vh;
 `;
 
 const StyledTaskInfo = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `;
 
 const StyledWrapperBtn = styled.div`
-    display:flex;
-    gap:3px;
+  display: flex;
+  gap: 3px;
+  position: sticky;
+  bottom: 0;
 `;
 
-
 const Task = () => {
-    return (
-        <StyledWrapper>
-            <Header />
-            <StyledTaskInfo>
-                <Executor />
-                <Description />
-            </StyledTaskInfo>
-            <StyledWrapperBtn>
-                <TaskBtn title="Остановить" />
-                <TaskBtn title="Завершить" />
-            </StyledWrapperBtn>
-
-        </StyledWrapper>
-    );
+  return (
+    <StyledWrapper>
+      <Header />
+      <StyledTaskInfo>
+        <Executor />
+        <Description />
+      </StyledTaskInfo>
+      <StyledWrapperBtn>
+        <TaskBtn title="Остановить" />
+        <TaskBtn title="Завершить" />
+      </StyledWrapperBtn>
+    </StyledWrapper>
+  );
 };
 
 export default Task;
