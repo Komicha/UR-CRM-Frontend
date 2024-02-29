@@ -2,10 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import ProjectIMG from "static/img/img.png";
 
-const StyledWrapper = styled.header`
-  width: 100vw;
+const StyledProjectWrapper = styled.div`
   display: flex;
   padding: 16px;
+`;
+
+const StyledContainer = styled.header`
+  display: flex;
+  flex-direction: column;
   background-color: #19212b;
 `;
 
@@ -29,14 +33,38 @@ const StyledTitle = styled.div`
   white-space: nowrap;
 `;
 
+const StyledTaskFilterButtons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 0 31px 4px 31px;
+`;
+
+const StyledTaskFilterButton = styled.button<{ isActive?: boolean }>`
+  width: 70px;
+  height: 26px;
+  border: none;
+  background-color: ${(props) => (props.isActive ? "#262D3B" : "transparent")};
+  color: ${(props) => (props.isActive ? "#3480E5" : "white")};
+  font-size: 12px;
+  border-radius: 10px;
+`;
+
 const Header = () => {
   return (
-    <StyledWrapper>
-      <StyledIMG src={ProjectIMG} />
-      <StyledTitle>
-        Project Title Project Title Project Title Project Title
-      </StyledTitle>
-    </StyledWrapper>
+    <StyledContainer>
+      <StyledProjectWrapper>
+        <StyledIMG src={ProjectIMG} />
+        <StyledTitle>
+          Project Title Project Title Project Title Project Title
+        </StyledTitle>
+      </StyledProjectWrapper>
+      <StyledTaskFilterButtons>
+        <StyledTaskFilterButton isActive>Пауза</StyledTaskFilterButton>
+        <StyledTaskFilterButton>В работе</StyledTaskFilterButton>
+        <StyledTaskFilterButton>В ревью</StyledTaskFilterButton>
+        <StyledTaskFilterButton>Готово</StyledTaskFilterButton>
+      </StyledTaskFilterButtons>
+    </StyledContainer>
   );
 };
 
