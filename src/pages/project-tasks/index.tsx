@@ -11,7 +11,6 @@ const StyledContainer = styled.div`
 const ProjectTasks = () => {
   return (
     <StyledContainer>
-      <Header />
       <AddTask />
       <NoTasks />
       <Task taskState="full" />

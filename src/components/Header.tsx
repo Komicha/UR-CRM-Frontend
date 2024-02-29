@@ -11,6 +11,8 @@ const StyledContainer = styled.header`
   display: flex;
   flex-direction: column;
   background-color: #19212b;
+  width: 382px;
+  margin: 0px auto;
 `;
 
 const StyledIMG = styled.img`

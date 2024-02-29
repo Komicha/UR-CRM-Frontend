@@ -30,7 +30,6 @@ const Task = () => {
   return (
     <StyledWrapper>
       <StyledContainer>
-        <Header />
         <StyledTaskInfo>
           <Executor />
           <Description />
