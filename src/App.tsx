@@ -3,11 +3,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./pages/main";
 import ProjectTasks from "./pages/project-tasks";
 import styled from "styled-components";
-declare global {
-  interface Window {
-    Telegram: any;
-  }
-}
 
 
 const StyledContainer = styled.div`
@@ -17,6 +12,7 @@ const StyledContainer = styled.div`
 `;
 
 function App() {
+
 
   return (
     <StyledContainer>

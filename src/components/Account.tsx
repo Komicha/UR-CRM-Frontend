@@ -22,7 +22,7 @@ const StyledName = styled.p`
     text-align: center;
 `;
 const Account = () => {
-    const tg = window.Telegram.WebApp;
+    const tg = Telegram.WebApp;
 
     return (
 
