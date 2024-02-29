@@ -8,7 +8,6 @@ const StyledWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
 `;
 
 const StyledTaskInfo = styled.div`
@@ -17,16 +16,25 @@ const StyledTaskInfo = styled.div`
     gap: 10px;
 `;
 
+const StyledWrapperBtn = styled.div`
+    display:flex;
+    gap:3px;
+`;
 
 
 const Task = () => {
     return (
         <StyledWrapper>
+            <Header />
             <StyledTaskInfo>
                 <Executor />
                 <Description />
             </StyledTaskInfo>
-            <TaskBtn />
+            <StyledWrapperBtn>
+                <TaskBtn title="Остановить" />
+                <TaskBtn title="Завершить" />
+            </StyledWrapperBtn>
+
         </StyledWrapper>
     );
 };
