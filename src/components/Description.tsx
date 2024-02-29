@@ -4,13 +4,13 @@ const StyledDescriptionText = styled.div`
     display: flex;
     flex-direction: column;
     gap: 8px;
-    font-family: Inter;
+
     font-size: 12px;
     font-weight: 500;
     line-height: 15px;
-    letter-spacing: 0em;
     text-align: left;
     color: white;
+    
     padding: 14px;
     background-color: #19212B;
     border-radius: 6px;
@@ -21,11 +21,8 @@ const StyledDescriptionTitle = styled.div`
     align-items: center;
     gap: 12px;
 
-    font-family: Inter;
     font-size: 11px;
     font-weight: 600;
-    line-height: 13px;
-    letter-spacing: 0em;
     text-align: left;
 
 `;
@@ -37,8 +34,6 @@ const StyledBtn = styled.button`
 `;
 const Description = () => {
     return (
-
-
         <StyledDescriptionText>
             <StyledDescriptionTitle>
                 <StyledBtn>

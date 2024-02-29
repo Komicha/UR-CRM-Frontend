@@ -23,12 +23,10 @@ const StyledExecutorTitle = styled.div`
     align-items: center;
     gap: 12px;
 
-    font-family: Inter;
+
     font-size: 12px;
     font-weight: 600;
     line-height: 13px;
-    letter-spacing: 0em;
-    text-align: left;
 
 `;
 const StyledExecutorProfile = styled.div`
@@ -37,13 +35,9 @@ const StyledExecutorProfile = styled.div`
     align-items: center;
     gap: 12px;
 
-
-    font-family: Inter;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 13px;
-    letter-spacing: 0em;
-    text-align: left;
 
 
 `;

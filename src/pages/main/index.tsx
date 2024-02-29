@@ -6,6 +6,7 @@ const StyledMain = styled.div`
     display: flex;
     flex-direction: column;
     gap: 17px;
+    padding-top: 10px;
 `;
 const StyledProjects = styled.div`
     display: flex;
