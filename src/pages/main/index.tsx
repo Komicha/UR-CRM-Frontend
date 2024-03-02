@@ -2,7 +2,7 @@ import styled from "styled-components";
 import UserPic from "../../static/img/UserPic.png"
 import Project from "components/Project";
 import { shallowEqual } from "react-redux";
-
+import { tg } from '../../static/constants'
 const StyledMain = styled.div`
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ const StyledName = styled.p`
 `;
 
 const Main = () => {
-    tg.BackButton.show;
+    tg.BackButton.show();
     const name = tg.initDataUnsafe?.user?.username
     return (
         <StyledMain>

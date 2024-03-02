@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-
+import { tg } from './static/constants'
 import Main from "./pages/main";
 import ProjectTasks from "./pages/project-tasks";
 import Task from "./pages/task";
@@ -8,10 +8,11 @@ import styled from "styled-components";
 import Layout from "components/Layout";
 
 
-tg.ready();
+
 
 function App() {
-  tg.ready();
+
+
   return (
 
     <BrowserRouter>
