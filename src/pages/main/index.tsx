@@ -41,6 +41,8 @@ const Main = () => {
             <StyledAccount>
                 <StyledPhoto>
                     <img src={UserPic} alt="" />
+                    <img src={tg.initDataUnsafe.user?.photo_url} alt="" />
+
                 </StyledPhoto>
                 <StyledName>
                     Name
