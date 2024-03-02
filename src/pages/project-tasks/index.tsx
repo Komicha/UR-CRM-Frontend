@@ -3,19 +3,33 @@ import NoTasks from "components/NoTasks";
 import AddTask from "components/AddTask";
 import Task from "components/Task";
 import styled from "styled-components";
+import { Link, useNavigate } from "react-router-dom";
 
 const StyledContainer = styled.div`
   padding-bottom: 34px;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
+
 const ProjectTasks = () => {
+  const navigate = useNavigate();
+
   return (
     <StyledContainer>
       <AddTask />
       <NoTasks />
-      <Task taskState="full" />
-      <Task taskState="middle" />
-      <Task taskState="low" />
+      <StyledLink to="/task">
+        <Task taskState="full" />
+      </StyledLink>
+      <StyledLink to="/task">
+        <Task taskState="middle" />
+      </StyledLink>
+      <StyledLink to="/task">
+        <Task taskState="low" />
+      </StyledLink>
     </StyledContainer>
   );
 };
