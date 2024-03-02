@@ -35,17 +35,17 @@ const StyledName = styled.p`
 const Main = () => {
     tg.BackButton.show();
     const name = tg.initDataUnsafe?.user?.username
-    console.log(name)
+    const imgprofile = tg.initDataUnsafe.user?.photo_url
+
+    console.log("пользователь: " + name)
+    console.log("url photo: " + imgprofile)
     return (
         <StyledMain>
             <StyledAccount>
                 <StyledPhoto>
-                    <img src={UserPic} alt="" />
-                    <img src={tg.initDataUnsafe.user?.photo_url} alt="" />
-
+                    <img src={imgprofile} alt="" />
                 </StyledPhoto>
                 <StyledName>
-                    Name
                     {name}
                 </StyledName>
                 <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
