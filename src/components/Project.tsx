@@ -6,7 +6,7 @@ import ProgressBar from "./ProgressBar";
 
 const StyledLink = styled(Link)`
     display: flex;
-    background-color: #19212B;
+    background-color: var(--tg-theme-button-color);
     flex-direction: column;
     gap: 20px;
     padding: 19px 18px;

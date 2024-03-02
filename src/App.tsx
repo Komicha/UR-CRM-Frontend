@@ -9,11 +9,9 @@ import { useEffect } from "react";
 import Layout from "components/Layout";
 
 const tg = Telegram.WebApp;
-function App() {
-  useEffect(() => {
-    tg.ready();
-  });
+tg.ready()
 
+function App() {
   return (
     <BrowserRouter>
       <Layout>
