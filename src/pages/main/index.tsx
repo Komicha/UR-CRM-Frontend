@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import UserPic from "../../static/img/UserPic.png"
 import Project from "components/Project";
+import { shallowEqual } from "react-redux";
 
 const StyledMain = styled.div`
     display: flex;
@@ -33,7 +34,7 @@ const StyledName = styled.p`
 `;
 
 const Main = () => {
-
+    tg.BackButton.show;
 
     return (
         <StyledMain>
@@ -43,6 +44,8 @@ const Main = () => {
                 </StyledPhoto>
                 <StyledName>
                     Name
+                    {tg.initDataUnsafe.user?.username}
+                    {tg.initDataUnsafe?.user?.username}
                     {Telegram.WebApp.initDataUnsafe?.user?.username}
                     {Telegram.WebApp.initDataUnsafe?.user?.photo_url}
 

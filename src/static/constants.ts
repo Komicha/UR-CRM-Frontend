@@ -1,1 +1,2 @@
-export const test = ""
+
+const tg = Telegram.WebApp;

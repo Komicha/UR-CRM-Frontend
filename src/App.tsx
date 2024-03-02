@@ -4,12 +4,11 @@ import Main from "./pages/main";
 import ProjectTasks from "./pages/project-tasks";
 import Task from "./pages/task";
 import styled from "styled-components";
-import { useEffect } from "react";
 
 import Layout from "components/Layout";
 
-const tg = Telegram.WebApp;
-tg.ready()
+
+tg.ready();
 
 function App() {
   return (
