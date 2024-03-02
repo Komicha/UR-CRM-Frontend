@@ -35,7 +35,7 @@ const StyledName = styled.p`
 
 const Main = () => {
     tg.BackButton.show;
-
+    const name = tg.initDataUnsafe?.user?.username
     return (
         <StyledMain>
             <StyledAccount>
@@ -44,10 +44,17 @@ const Main = () => {
                 </StyledPhoto>
                 <StyledName>
                     Name
+                    .
+                    {name}
+                    .
                     {tg.initDataUnsafe.user?.username}
+                    .
                     {tg.initDataUnsafe?.user?.username}
+                    .
                     {Telegram.WebApp.initDataUnsafe?.user?.username}
+                    .
                     {Telegram.WebApp.initDataUnsafe?.user?.photo_url}
+                    .
 
                 </StyledName>
                 <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">

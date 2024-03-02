@@ -11,7 +11,9 @@ import Layout from "components/Layout";
 tg.ready();
 
 function App() {
+  tg.ready();
   return (
+
     <BrowserRouter>
       <Layout>
         <Routes>
