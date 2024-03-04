@@ -6,6 +6,9 @@ import GlobalStyles from "theme/globalStyle";
 
 import { Normalize } from "styled-normalize";
 
+import { store } from "store/store";
+import { Provider } from "react-redux";
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
@@ -14,7 +17,8 @@ root.render(
     <Normalize />
 
     <GlobalStyles />
-
-    <App />
-  </React.StrictMode >
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>
 );
