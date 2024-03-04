@@ -4,6 +4,7 @@ import ProjectIMG from "static/img/img.png";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "store/store";
 import { setFilter } from "store/taskCardFilter";
+import { useLocation } from "react-router-dom";
 
 const StyledProjectWrapper = styled.div`
   display: flex;
@@ -57,6 +58,8 @@ const Header = () => {
   const currentFilter = useSelector((state: RootState) => state.filter.value);
   const dispatch = useDispatch();
 
+  const location = useLocation();
+
   return (
     <StyledContainer>
       <StyledProjectWrapper>
@@ -65,32 +68,34 @@ const Header = () => {
           Project Title Project Title Project Title Project Title
         </StyledTitle>
       </StyledProjectWrapper>
-      <StyledTaskFilterButtons>
-        <StyledTaskFilterButton
-          onClick={() => dispatch(setFilter("pause"))}
-          isActive={currentFilter === "pause"}
-        >
-          Пауза
-        </StyledTaskFilterButton>
-        <StyledTaskFilterButton
-          onClick={() => dispatch(setFilter("work"))}
-          isActive={currentFilter === "work"}
-        >
-          В работе
-        </StyledTaskFilterButton>
-        <StyledTaskFilterButton
-          onClick={() => dispatch(setFilter("review"))}
-          isActive={currentFilter === "review"}
-        >
-          В ревью
-        </StyledTaskFilterButton>
-        <StyledTaskFilterButton
-          onClick={() => dispatch(setFilter("done"))}
-          isActive={currentFilter === "done"}
-        >
-          Готово
-        </StyledTaskFilterButton>
-      </StyledTaskFilterButtons>
+      {location.pathname === "/project-tasks" && (
+        <StyledTaskFilterButtons>
+          <StyledTaskFilterButton
+            onClick={() => dispatch(setFilter("pause"))}
+            isActive={currentFilter === "pause"}
+          >
+            Пауза
+          </StyledTaskFilterButton>
+          <StyledTaskFilterButton
+            onClick={() => dispatch(setFilter("work"))}
+            isActive={currentFilter === "work"}
+          >
+            В работе
+          </StyledTaskFilterButton>
+          <StyledTaskFilterButton
+            onClick={() => dispatch(setFilter("review"))}
+            isActive={currentFilter === "review"}
+          >
+            В ревью
+          </StyledTaskFilterButton>
+          <StyledTaskFilterButton
+            onClick={() => dispatch(setFilter("done"))}
+            isActive={currentFilter === "done"}
+          >
+            Готово
+          </StyledTaskFilterButton>
+        </StyledTaskFilterButtons>
+      )}
     </StyledContainer>
   );
 };

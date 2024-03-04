@@ -1,9 +1,8 @@
-import Header from "components/Header";
 import NoTasks from "components/NoTasks";
 import AddTask from "components/AddTask";
 import Task from "components/Task";
 import styled from "styled-components";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const StyledContainer = styled.div`
   padding-bottom: 34px;
@@ -15,8 +14,6 @@ const StyledLink = styled(Link)`
 `;
 
 const ProjectTasks = () => {
-  const navigate = useNavigate();
-
   return (
     <StyledContainer>
       <AddTask />
