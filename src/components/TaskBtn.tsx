@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import ArrowSVG from "static/svg/arrow.svg";
 
+interface Props {
+  title: string;
+  icon?: string;
+}
+
 const StyledBtn = styled.button`
   display: flex;
   flex-direction: row;
@@ -19,21 +24,21 @@ const StyledWrapper = styled.div`
   padding-bottom: 10px;
   width: 100%;
 `;
-const StyledArrow = styled.div`
+const StyledIcon = styled.div<{ icon?: any }>`
   width: 18px;
   height: 18px;
 
-  background-image: url("${ArrowSVG}");
+  background-image: url("${(props) => (props.icon ? props.icon : ArrowSVG)}");
   background-repeat: no-repeat;
   background-size: cover;
 `;
 
-const TaskBtn = ({ title }: { title: string }) => {
+const TaskBtn = (props: Props) => {
   return (
     <StyledWrapper>
       <StyledBtn>
-        {title}
-        <StyledArrow />
+        {props.title}
+        {props.icon && <StyledIcon />}
       </StyledBtn>
     </StyledWrapper>
   );
