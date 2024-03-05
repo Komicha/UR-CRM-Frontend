@@ -4,7 +4,7 @@ import AddTask from "components/AddTask";
 import Task from "components/Task";
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
-
+import { tg } from '../../static/constants'
 const StyledContainer = styled.div`
   padding-bottom: 34px;
 `;
@@ -15,10 +15,11 @@ const StyledLink = styled(Link)`
 `;
 
 const ProjectTasks = () => {
-  const navigate = useNavigate();
-
+  tg.BackButton.show();
   return (
+
     <StyledContainer>
+
       <AddTask />
       <NoTasks />
       <StyledLink to="/task">

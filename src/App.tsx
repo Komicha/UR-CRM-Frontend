@@ -6,12 +6,15 @@ import Task from "./pages/task";
 import styled from "styled-components";
 
 import Layout from "components/Layout";
+import { useEffect } from "react";
 
 
 
 
 function App() {
-
+  useEffect(() => {
+    tg.ready();
+  })
 
   return (
 
