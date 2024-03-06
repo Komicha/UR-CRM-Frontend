@@ -4,6 +4,7 @@ import ArrowSVG from "static/svg/arrow.svg";
 interface Props {
   title: string;
   icon?: string;
+  onClick?: any;
 }
 
 const StyledBtn = styled.button`
@@ -36,7 +37,7 @@ const StyledIcon = styled.div<{ icon?: any }>`
 const TaskBtn = (props: Props) => {
   return (
     <StyledWrapper>
-      <StyledBtn>
+      <StyledBtn onClick={() => props.onClick()}>
         {props.title}
         {props.icon && <StyledIcon />}
       </StyledBtn>

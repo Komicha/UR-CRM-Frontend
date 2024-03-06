@@ -1,5 +1,14 @@
 import styled from "styled-components";
 import UserCard from "./UserCard";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "store/store";
+import { selectUser } from "store/tasks";
+import { setFilter } from "store/taskCardFilter";
+
+interface Props {
+  selectedUser: string;
+  selectUser: any;
+}
 
 const StyledTitle = styled.div`
   font-size: 14px;
@@ -24,15 +33,31 @@ const StyledUsersWrapper = styled.div`
   margin: 16px;
 `;
 
-const UserSelection = () => {
+const UserSelection = (props: Props) => {
   return (
     <StyledContainer>
       <StyledTitle>Назначить</StyledTitle>
       <StyledUsersWrapper>
-        <UserCard isActive />
-        <UserCard />
-        <UserCard />
-        <UserCard />
+        <UserCard
+          userId="1"
+          selectedUser={props.selectedUser}
+          selectUser={props.selectUser}
+        />
+        <UserCard
+          userId="2"
+          selectedUser={props.selectedUser}
+          selectUser={props.selectUser}
+        />
+        <UserCard
+          userId="3"
+          selectedUser={props.selectedUser}
+          selectUser={props.selectUser}
+        />
+        <UserCard
+          userId="4"
+          selectedUser={props.selectedUser}
+          selectUser={props.selectUser}
+        />
       </StyledUsersWrapper>
     </StyledContainer>
   );

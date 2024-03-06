@@ -1,6 +1,11 @@
 import UserSelection from "components/UserSelection";
 import styled from "styled-components";
 import TaskBtn from "components/TaskBtn";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "store/store";
+import { selectUser } from "store/tasks";
+import { useNavigate } from "react-router-dom";
 
 const StyledContainer = styled.div`
   display: flex;
@@ -11,10 +16,26 @@ const StyledContainer = styled.div`
 `;
 
 const UserSelectionPage = () => {
+  const [user, setUser] = useState("");
+  const currentUser = useSelector(
+    (state: RootState) => state.tasks.selectedUser
+  );
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setUser(currentUser);
+  }, [currentUser]);
+
+  const submitUser = () => {
+    dispatch(selectUser(user));
+    navigate("/project-tasks");
+  };
+
   return (
     <StyledContainer>
-      <UserSelection />
-      <TaskBtn title="Назначить" />
+      <UserSelection selectedUser={user} selectUser={setUser} />
+      <TaskBtn onClick={submitUser} title="Назначить" />
     </StyledContainer>
   );
 };

@@ -3,11 +3,14 @@ import AvatarIMG from "static/img/UserPic.png";
 import CheckSVG from "static/svg/check.svg";
 
 interface Props {
-  isActive?: boolean;
+  userId: string;
+  selectedUser: string;
+  selectUser: any;
 }
 
 const StyledContainer = styled.div`
   display: flex;
+  cursor: pointer;
 `;
 
 const StyledAvatar = styled.img`
@@ -43,14 +46,20 @@ const StyledCheck = styled.div`
 `;
 
 const UserCard = (props: Props) => {
+  const isActive = props.userId === props.selectedUser;
+
+  const select = () => {
+    props.selectUser(props.userId);
+  };
+
   return (
-    <StyledContainer>
+    <StyledContainer onClick={() => select()}>
       <StyledAvatar src={AvatarIMG} />
       <StyledUsernameWrapper>
         <StyledUsernameTitle>Denis Qu</StyledUsernameTitle>
         <StyledUsername>@Denis</StyledUsername>
       </StyledUsernameWrapper>
-      {props.isActive && <StyledCheck />}
+      {isActive && <StyledCheck />}
     </StyledContainer>
   );
 };
