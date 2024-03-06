@@ -2,7 +2,11 @@ import NoTasks from "components/NoTasks";
 import AddTask from "components/AddTask";
 import Task from "components/Task";
 import styled from "styled-components";
+
+import { tg } from '../../static/constants'
+
 import { Link } from "react-router-dom";
+
 
 const StyledContainer = styled.div`
   padding-bottom: 34px;
@@ -14,8 +18,14 @@ const StyledLink = styled(Link)`
 `;
 
 const ProjectTasks = () => {
+
+  tg.BackButton.show();
+
+
   return (
+
     <StyledContainer>
+
       <AddTask />
       <NoTasks />
       <StyledLink to="/task">
