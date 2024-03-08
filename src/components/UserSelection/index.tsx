@@ -13,7 +13,7 @@ interface Props {
 const StyledTitle = styled.div`
   font-size: 14px;
   font-weight: 300;
-  color: #758398;
+  color: var(--tg-theme-hint-color);
   margin-top: 10px;
   margin-bottom: 16px;
   margin-left: 10px;
@@ -21,7 +21,7 @@ const StyledTitle = styled.div`
 
 const StyledContainer = styled.div`
   border-radius: 12px;
-  background-color: #19212b;
+  background-color: var(--tg-theme-secondary-bg-color);
   margin-top: 16px;
 `;
 

@@ -6,7 +6,7 @@ import ProgressBar from "./ProgressBar";
 
 const StyledLink = styled(Link)`
     display: flex;
-    background-color: var(--tg-theme-button-color);
+    background-color: var(--tg-theme-bg-color);
     flex-direction: column;
     gap: 20px;
     padding: 19px 18px;
@@ -15,14 +15,13 @@ const StyledLink = styled(Link)`
     text-decoration: none;
 `;
 const StyledNameProject = styled.div`
-font-family: Inter;
-font-size: 17px;
-font-weight: 600;
-line-height: 21px;
-letter-spacing: 0em;
-text-align: left;
-
-
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--tg-theme-text-color);
 `;
 
 
