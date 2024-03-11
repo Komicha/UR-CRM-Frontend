@@ -7,16 +7,10 @@ const StyledExecutor = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: var(--tg-theme-text-color);
     padding: 14px;
     background-color: var(--tg-theme-bg-color);
     border-radius: 6px;
-`;
-
-const StyledBtn = styled.button`
-    border: none;
-    width: 16px;
-    height: 16px;
 `;
 
 const StyledExecutorTitle = styled.div`
@@ -40,7 +34,6 @@ const StyledExecutorProfile = styled.div`
     font-size: 12px;
     font-weight: 500;
     line-height: 13px;
-
 
 `;
 

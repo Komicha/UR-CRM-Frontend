@@ -36,7 +36,7 @@ const StyledName = styled.p`
 `;
 
 // const user_id = tg.initDataUnsafe.user?.id
-// fetch('http://localhost:8000/api/users/${user_id}', {
+// fetch(`http://localhost:8000/api/users/?${user_id}`, {
 //     method: 'GET'
 // })
 //     .then((response) => {

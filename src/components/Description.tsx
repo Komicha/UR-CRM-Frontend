@@ -9,7 +9,7 @@ const StyledDescriptionText = styled.div`
     font-weight: 500;
     line-height: 15px;
     text-align: left;
-    color: white;
+    color: var(--tg-theme-text-color);
     
     padding: 14px;
     background-color: var(--tg-theme-bg-color);
@@ -24,13 +24,8 @@ const StyledDescriptionTitle = styled.div`
     font-size: 11px;
     font-weight: 600;
     text-align: left;
+    color: var(--tg-theme-text-color);
 
-`;
-
-const StyledBtn = styled.button`
-    border: none;
-    width: 16px;
-    height: 16px;
 `;
 const Description = () => {
     return (

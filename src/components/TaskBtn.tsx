@@ -40,7 +40,7 @@ const TaskBtn = (props: Props) => {
     <StyledWrapper>
       <StyledBtn onClick={() => props.onClick()}>
         {props.title}
-        {props.icon && <StyledIcon />}
+        {props.icon && <StyledIcon icon={props.icon} />}
       </StyledBtn>
     </StyledWrapper>
   );
