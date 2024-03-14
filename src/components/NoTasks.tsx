@@ -7,9 +7,9 @@ const StyledContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   width: 100%;
-  background-color: #19212b;
+  background-color: var(--tg-theme-bg-color);
+  color: var(--tg-theme-text-color);
   margin-top: 16px;
   border-radius: 12px;
   height: 453px;

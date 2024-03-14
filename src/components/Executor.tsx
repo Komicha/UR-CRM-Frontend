@@ -1,20 +1,16 @@
 import styled from "styled-components";
 import ImgProfile from "../static/img/imgprofile.png"
+import user from "../static/img/user.png"
+
 const StyledExecutor = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: var(--tg-theme-text-color);
     padding: 14px;
-    background-color: #19212B;
+    background-color: var(--tg-theme-bg-color);
     border-radius: 6px;
-`;
-
-const StyledBtn = styled.button`
-    border: none;
-    width: 16px;
-    height: 16px;
 `;
 
 const StyledExecutorTitle = styled.div`
@@ -39,15 +35,13 @@ const StyledExecutorProfile = styled.div`
     font-weight: 500;
     line-height: 13px;
 
-
 `;
 
 const Executor = () => {
     return (
         <StyledExecutor>
             <StyledExecutorTitle>
-                <StyledBtn>
-                </StyledBtn>
+                <img src={user} alt="" width="16px" height="16px" />
                 Исполнитель:
             </StyledExecutorTitle>
             <StyledExecutorProfile>

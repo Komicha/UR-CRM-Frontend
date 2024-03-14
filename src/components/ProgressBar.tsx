@@ -15,6 +15,7 @@ const StyledProgressBar = styled.div`
     height: 13px;
     border-radius: 7px;
     border: 1px solid;
+    border-color: var(--tg-theme-text-color);
     
 `;
 const StyledProgressBarFill = styled.div`
@@ -22,15 +23,15 @@ const StyledProgressBarFill = styled.div`
     height:5px;
     width: 100%;
     margin: 2px 2px;
-    background-color: #FFFFFF;
+    background-color: var(--tg-theme-text-color);
     transition: width 0.5 ease-out;
 `;
 const StyledProgressLabel = styled.div`
-    
+    color: var(--tg-theme-text-color);
 `;
 
 const ProgressBar = () => {
-    const [progress, setProgress] = useState(0);
+    const [progress, setProgress] = useState(40);
 
 
     return (

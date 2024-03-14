@@ -6,7 +6,7 @@ const StyledContainer = styled.div`
   align-items: center;
 
   width: 100%;
-  background-color: #19212b;
+  background-color: var(--tg-theme-bg-color);
   border-radius: 12px;
   height: 44px;
   margin-top: 16px;

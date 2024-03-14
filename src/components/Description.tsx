@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import description from "../static/img/description.png"
 const StyledDescriptionText = styled.div`
     display: flex;
     flex-direction: column;
@@ -9,10 +9,10 @@ const StyledDescriptionText = styled.div`
     font-weight: 500;
     line-height: 15px;
     text-align: left;
-    color: white;
+    color: var(--tg-theme-text-color);
     
     padding: 14px;
-    background-color: #19212B;
+    background-color: var(--tg-theme-bg-color);
     border-radius: 6px;
 `;
 const StyledDescriptionTitle = styled.div`
@@ -24,21 +24,14 @@ const StyledDescriptionTitle = styled.div`
     font-size: 11px;
     font-weight: 600;
     text-align: left;
+    color: var(--tg-theme-text-color);
 
-`;
-
-const StyledBtn = styled.button`
-    border: none;
-    width: 16px;
-    height: 16px;
 `;
 const Description = () => {
     return (
         <StyledDescriptionText>
             <StyledDescriptionTitle>
-                <StyledBtn>
-
-                </StyledBtn>
+                <img src={description} alt="" width="16px" height="16px" />
                 Описание:
             </StyledDescriptionTitle>
             Повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что консультация с широким активом позволяет оценить значение новых предложений. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности позволяет оценить значение модели развития.

@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
 
 
   body {
-    background-color: #262D3B;
+    background-color: var(--tg-theme-secondary-bg-color);
     color: white;
     font-family: Inter;
   }

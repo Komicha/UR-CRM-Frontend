@@ -2,13 +2,15 @@ import Description from "components/Description";
 import Executor from "components/Executor";
 import TaskBtn from "components/TaskBtn";
 import styled from "styled-components";
-
+import Pause from "../../static/svg/pause.svg"
+import Complete from "../../static/svg/complete.svg"
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
   height: 100vh;
+  color: var(--tg-theme-text-color);
 `;
 
 const StyledTaskInfo = styled.div`
@@ -35,8 +37,8 @@ const Task = () => {
         </StyledTaskInfo>
       </StyledContainer>
       <StyledWrapperBtn>
-        <TaskBtn title="Остановить" />
-        <TaskBtn title="Завершить" />
+        <TaskBtn title="Остановить" icon={Pause} />
+        <TaskBtn title="Завершить" icon={Complete} />
       </StyledWrapperBtn>
     </StyledWrapper>
   );

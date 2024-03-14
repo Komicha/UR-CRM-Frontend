@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ArrowSVG from "static/svg/arrow.svg";
+import ArrowSVG from "../static/svg/arrow.svg";
 
 interface Props {
   title: string;
@@ -17,7 +17,8 @@ const StyledBtn = styled.button`
   width: 100%;
   border-radius: 6px;
   color: white;
-  background: #708499;
+  background: var(--tg-theme-button-color);
+  color: var(--tg-theme-button-text-color);
   border: none;
 `;
 
@@ -39,7 +40,7 @@ const TaskBtn = (props: Props) => {
     <StyledWrapper>
       <StyledBtn onClick={() => props.onClick()}>
         {props.title}
-        {props.icon && <StyledIcon />}
+        {props.icon && <StyledIcon icon={props.icon} />}
       </StyledBtn>
     </StyledWrapper>
   );

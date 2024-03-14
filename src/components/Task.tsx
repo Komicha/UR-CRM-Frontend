@@ -24,12 +24,14 @@ const handleDotsState = (state: string) => {
 const StyledContainer = styled.div`
   height: 136px;
   width: 100%;
-  background-color: #19212b;
+  background-color: var(--tg-theme-bg-color);
   border-radius: 8px;
   margin-top: 16px;
-  border-left: 8px solid white;
+  border-left: 8px solid var(--tg-theme-text-color);
   padding: 16px;
   box-sizing: border-box;
+  color: var(--tg-theme-text-color);
+  
 `;
 
 const StyledTitleWrapper = styled.div`
@@ -71,13 +73,12 @@ const StyledInfo = styled.div`
   display: flex;
   align-items: center;
   font-size: 12px;
-  color: #969696;
+  color: var(--tg-theme-hint-color);
 `;
 
 const StyledArrow = styled.div`
   width: 18px;
   height: 18px;
-
   background-image: url("${ArrowSVG}");
   background-repeat: no-repeat;
   background-size: cover;
