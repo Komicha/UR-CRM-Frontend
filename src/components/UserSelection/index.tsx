@@ -3,7 +3,7 @@ import UserCard from "./UserCard";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "store/store";
 import { selectUser } from "store/tasks";
-import { setFilter } from "store/taskCardFilter";
+import { setFilter } from "store/tasks/taskCardFilter";
 
 interface Props {
   selectedUser: string;

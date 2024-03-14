@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ProjectIMG from "static/img/img.png";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "store/store";
-import { setFilter } from "store/taskCardFilter";
+import { setFilter } from "store/tasks/taskCardFilter";
 import { useLocation } from "react-router-dom";
 
 const StyledProjectWrapper = styled.div`
