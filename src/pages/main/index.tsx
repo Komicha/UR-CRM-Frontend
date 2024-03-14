@@ -36,14 +36,14 @@ const StyledName = styled.p`
 `;
 
 const user_id = tg.initDataUnsafe.user?.id
-fetch(`https://crm-backend-3dov.onrender.com/api/projects/?user_id=${user_id}`, {
+fetch(`https://crm-backend-3dov.onrender.com/api/user/?user_id=${user_id}`, {
     method: 'GET'
 })
     .then((response) => {
         return response.json();
     })
     .then((data) => {
-        console.log(data);
+        console.log("инфа" + data);
     });
 
 
