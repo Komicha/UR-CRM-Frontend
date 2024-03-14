@@ -36,10 +36,6 @@ const Project = () => {
             <ProgressBar />
         </StyledLink>
 
-
-
-
-
     );
 }
 

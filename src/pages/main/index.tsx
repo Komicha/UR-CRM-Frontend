@@ -35,16 +35,16 @@ const StyledName = styled.p`
     color: var(--tg-theme-text-color);
 `;
 
-// const user_id = tg.initDataUnsafe.user?.id
-// fetch(`http://localhost:8000/api/users/?${user_id}`, {
-//     method: 'GET'
-// })
-//     .then((response) => {
-//         return response.json();
-//     })
-//     .then((data) => {
-//         console.log(data);
-//     });
+const user_id = tg.initDataUnsafe.user?.id
+fetch(`https://crm-backend-3dov.onrender.com/api/projects/?user_id=${user_id}`, {
+    method: 'GET'
+})
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+        console.log(data);
+    });
 
 
 const Main = () => {
