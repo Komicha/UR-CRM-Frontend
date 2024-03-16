@@ -49,14 +49,20 @@ const StyledTaskFilterButton = styled.button<{ isActive?: boolean }>`
   width: 70px;
   height: 26px;
   border: none;
-  background-color: ${(props) => (props.isActive ? "var(--tg-theme-secondary-bg-color)" : "transparent")};
-  color: ${(props) => (props.isActive ? "var(--tg-theme-accent-text-color)" : "var(--tg-theme-text-color)")};
+  background-color: ${(props) =>
+    props.isActive ? "var(--tg-theme-secondary-bg-color)" : "transparent"};
+  color: ${(props) =>
+    props.isActive
+      ? "var(--tg-theme-accent-text-color)"
+      : "var(--tg-theme-text-color)"};
   font-size: 12px;
   border-radius: 10px;
 `;
 
 const Header = () => {
-  const currentFilter = useSelector((state: RootState) => state.filter.value);
+  const currentFilter = useSelector(
+    (state: RootState) => state.filterState.value
+  );
   const dispatch = useDispatch();
 
   const location = useLocation();

@@ -7,6 +7,7 @@ import ArrowSVG from "static/svg/arrow.svg";
 import DotsFullSVG from "static/svg/dots-full.svg";
 import DotsMiddleSVG from "static/svg/dots-middle.svg";
 import DotsLowSVG from "static/svg/dots-low.svg";
+import { TaskForm } from "store/tasks";
 
 const handleDotsState = (state: string) => {
   switch (state) {
@@ -31,7 +32,6 @@ const StyledContainer = styled.div`
   padding: 16px;
   box-sizing: border-box;
   color: var(--tg-theme-text-color);
-  
 `;
 
 const StyledTitleWrapper = styled.div`
@@ -93,21 +93,18 @@ const StyledDots = styled.div<{ state: string }>`
 `;
 
 type Props = {
-  taskState: string;
+  task: TaskForm;
 };
 
 const Task = (props: Props) => {
   return (
     <StyledContainer>
       <StyledTitleWrapper>
-        <StyledTitle>Подготовить отчет</StyledTitle>
-        <StyledDots state={props.taskState} />
+        <StyledTitle>{props.task.title}</StyledTitle>
+        <StyledDots state={props.task.status} />
       </StyledTitleWrapper>
 
-      <StyledDescription>
-        Повседневная практика показывает, что рамки и место обучения кадров
-        12321321312321213321312321213213421 421421
-      </StyledDescription>
+      <StyledDescription>{props.task.description}</StyledDescription>
       <StyledWrapper>
         <StyledInfo>
           <StyledAvatar src={AvatarIMG} />

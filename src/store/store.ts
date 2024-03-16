@@ -4,8 +4,8 @@ import tasksReducer from "./tasks";
 
 export const store = configureStore({
   reducer: {
-    filter: filterReducer,
-    tasks: tasksReducer,
+    filterState: filterReducer,
+    tasksState: tasksReducer,
   },
 });
 

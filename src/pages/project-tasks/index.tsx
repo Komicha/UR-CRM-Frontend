@@ -3,10 +3,11 @@ import AddTask from "components/AddTask";
 import Task from "components/Task";
 import styled from "styled-components";
 
-import { tg } from '../../static/constants'
+import { tg } from "../../static/constants";
 
 import { Link } from "react-router-dom";
-
+import { useSelector } from "react-redux";
+import { RootState } from "store/store";
 
 const StyledContainer = styled.div`
   padding-bottom: 34px;
@@ -18,25 +19,21 @@ const StyledLink = styled(Link)`
 `;
 
 const ProjectTasks = () => {
-
   tg.BackButton.show();
 
+  const tasks = useSelector((state: RootState) => state.tasksState.tasks);
 
   return (
-
     <StyledContainer>
-
       <AddTask />
       <NoTasks />
-      <StyledLink to="/task">
-        <Task taskState="full" />
-      </StyledLink>
-      <StyledLink to="/task">
-        <Task taskState="middle" />
-      </StyledLink>
-      <StyledLink to="/task">
-        <Task taskState="low" />
-      </StyledLink>
+      {tasks.map((task) => {
+        return (
+          <StyledLink to="/task">
+            <Task task={task} />
+          </StyledLink>
+        );
+      })}
     </StyledContainer>
   );
 };
