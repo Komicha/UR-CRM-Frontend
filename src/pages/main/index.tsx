@@ -36,16 +36,15 @@ const StyledName = styled.p`
 `;
 
 const user_id = tg.initDataUnsafe.user?.id;
-/*fetch(`https://crm-backend-3dov.onrender.com/api/user_data/?user_id=${user_id}`, {
-    method: 'GET'
+fetch(`https://backtest-6y6a.onrender.com/api/mymodels/?user_id=${user_id}`, {
+  method: "GET",
 })
-    .then((response) => {
-        return response.json();
-    })
-    .then((data) => {
-        console.log("инфа" + data);
-    });
-*/
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log("инфа от сервера: " + data);
+  });
 
 const Main = () => {
   tg.BackButton.hide();
