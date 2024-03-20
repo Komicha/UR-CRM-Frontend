@@ -7,7 +7,7 @@ import ArrowSVG from "static/svg/arrow.svg";
 import DotsFullSVG from "static/svg/dots-full.svg";
 import DotsMiddleSVG from "static/svg/dots-middle.svg";
 import DotsLowSVG from "static/svg/dots-low.svg";
-import { TaskForm } from "store/tasks";
+import { Task } from "store/tasksSlice";
 
 const handleDotsState = (state: string) => {
   switch (state) {
@@ -93,10 +93,10 @@ const StyledDots = styled.div<{ state: string }>`
 `;
 
 type Props = {
-  task: TaskForm;
+  task: Task;
 };
 
-const Task = (props: Props) => {
+const TaskCard = (props: Props) => {
   return (
     <StyledContainer>
       <StyledTitleWrapper>
@@ -116,4 +116,4 @@ const Task = (props: Props) => {
   );
 };
 
-export default Task;
+export default TaskCard;

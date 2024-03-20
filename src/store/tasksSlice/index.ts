@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-export interface TaskForm {
+export interface Task {
   id: string | number;
   title: string;
   description: string;
@@ -37,10 +37,10 @@ const initialState: Tasks = {
 };
 
 export const tasksSlice = createSlice({
-  name: "tasksState",
+  name: "tasksSlice",
   initialState,
   reducers: {
-    addTask: (state, action: PayloadAction<TaskForm>) => {
+    addTask: (state, action: PayloadAction<Task>) => {
       state.tasks.push({
         id: action.payload.id,
         title: action.payload.title,

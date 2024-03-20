@@ -9,8 +9,8 @@ const initialState: Filter = {
   value: "pause",
 };
 
-export const filterSlice = createSlice({
-  name: "filter",
+export const tasksFilterSlice = createSlice({
+  name: "tasksFilterSlice",
   initialState,
   reducers: {
     setFilter: (state, action: PayloadAction<string>) => {
@@ -19,6 +19,6 @@ export const filterSlice = createSlice({
   },
 });
 
-export const { setFilter } = filterSlice.actions;
+export const { setFilter } = tasksFilterSlice.actions;
 
-export default filterSlice.reducer;
+export default tasksFilterSlice.reducer;
