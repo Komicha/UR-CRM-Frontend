@@ -57,7 +57,7 @@ const Main = () => {
         const fetchData = async () => {
             try {
                 dispatch({ type: 'FETCH_PROJECTS_REQUEST' });
-                const response = await fetch(`http://127.0.0.1:8000/api/projects/?user_id=${user_id}`);
+                const response = await fetch(`https://backtest-6y6a.onrender.com/api/projects/?user_id=${user_id}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch projects');
                 }
