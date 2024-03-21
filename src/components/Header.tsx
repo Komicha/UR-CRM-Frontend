@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ProjectIMG from "static/img/img.png";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "store/store";
-import { setFilter } from "store/tasks/taskCardFilter";
+import { setFilter } from "store/tasksSlice/tasksFilterSlice";
 import { useLocation } from "react-router-dom";
 
 const StyledProjectWrapper = styled.div`
@@ -61,7 +61,7 @@ const StyledTaskFilterButton = styled.button<{ isActive?: boolean }>`
 
 const Header = () => {
   const currentFilter = useSelector(
-    (state: RootState) => state.filterState.value
+    (state: RootState) => state.tasksFilterReducer.value
   );
   const dispatch = useDispatch();
 

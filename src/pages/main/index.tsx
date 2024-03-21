@@ -1,41 +1,42 @@
 import styled from "styled-components";
-import UserPic from "../../static/img/UserPic.png"
+import UserPic from "../../static/img/UserPic.png";
 import Project from "components/Project";
-import { tg } from '../../static/constants'
+import { tg } from "../../static/constants";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
 const StyledMain = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 17px;
-    padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding-top: 10px;
 `;
 const StyledProjects = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 `;
 const StyledAccount = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    gap: 9px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
 `;
 const StyledPhoto = styled.div`
-    width: 42px;
-    height: 42px;
-    border-radius: 100px;
+  width: 42px;
+  height: 42px;
+  border-radius: 100px;
 `;
 const StyledName = styled.p`
-    font-family: Inter;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 17px;
-    text-align: center;
-    color: var(--tg-theme-text-color);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  text-align: center;
+  color: var(--tg-theme-text-color);
 `;
+
 
 const user_id = tg.initDataUnsafe.user?.id
 // fetch(`https://backtest-6y6a.onrender.com/api/mymodels/?user_id=${user_id}`, {
@@ -95,6 +96,5 @@ const Main = () => {
             </StyledProjects>
         </StyledMain>
     );
-};
-
+}
 export default Main;

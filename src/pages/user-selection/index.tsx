@@ -4,7 +4,7 @@ import TaskBtn from "components/TaskBtn";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "store/store";
-import { selectUser } from "store/tasks";
+import { selectUser } from "store/tasksSlice";
 import { useNavigate } from "react-router-dom";
 
 const StyledContainer = styled.div`
@@ -18,7 +18,7 @@ const StyledContainer = styled.div`
 const UserSelectionPage = () => {
   const [user, setUser] = useState("");
   const currentUser = useSelector(
-    (state: RootState) => state.tasksState.selectedUser
+    (state: RootState) => state.tasksReducer.selectedUser
   );
   const dispatch = useDispatch();
   const navigate = useNavigate();

@@ -1,6 +1,6 @@
 import NoTasks from "components/NoTasks";
 import AddTask from "components/AddTask";
-import Task from "components/Task";
+import TaskCard from "components/Task";
 import styled from "styled-components";
 
 import { tg } from "../../static/constants";
@@ -21,7 +21,7 @@ const StyledLink = styled(Link)`
 const ProjectTasks = () => {
   tg.BackButton.show();
 
-  const tasks = useSelector((state: RootState) => state.tasksState.tasks);
+  const tasks = useSelector((state: RootState) => state.tasksReducer.tasks);
 
   return (
     <StyledContainer>
@@ -29,8 +29,8 @@ const ProjectTasks = () => {
       <NoTasks />
       {tasks.map((task) => {
         return (
-          <StyledLink to="/task">
-            <Task task={task} />
+          <StyledLink to="/task" key={`task-${task.id}`}>
+            <TaskCard task={task} />
           </StyledLink>
         );
       })}
