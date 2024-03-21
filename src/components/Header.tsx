@@ -61,7 +61,7 @@ const StyledTaskFilterButton = styled.button<{ isActive?: boolean }>`
 
 const Header = () => {
   const currentFilter = useSelector(
-    (state: RootState) => state.tasksFilterReducer.value
+    (state: RootState) => state.filterState.value
   );
   const dispatch = useDispatch();
 

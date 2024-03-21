@@ -21,7 +21,7 @@ const StyledLink = styled(Link)`
 const ProjectTasks = () => {
   tg.BackButton.show();
 
-  const tasks = useSelector((state: RootState) => state.tasksReducer.tasks);
+  const tasks = useSelector((state: RootState) => state.tasksState.tasks);
 
   return (
     <StyledContainer>

@@ -18,7 +18,7 @@ const StyledContainer = styled.div`
 const UserSelectionPage = () => {
   const [user, setUser] = useState("");
   const currentUser = useSelector(
-    (state: RootState) => state.tasksReducer.selectedUser
+    (state: RootState) => state.tasksState.selectedUser
   );
   const dispatch = useDispatch();
   const navigate = useNavigate();
