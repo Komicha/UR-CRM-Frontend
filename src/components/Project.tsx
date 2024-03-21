@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ProgressBar from "./ProgressBar";
+import { title } from "process";
 
-
+interface Project {
+    id: number;
+    title: string;
+}
 
 const StyledLink = styled(Link)`
     display: flex;
@@ -26,12 +30,11 @@ const StyledNameProject = styled.div`
 
 
 
-const Project = () => {
+const Project = (props: Project) => {
     return (
-
         <StyledLink to="/project-tasks">
             <StyledNameProject>
-                Разработка платформы для оптовых продаж
+                {props.title}
             </StyledNameProject>
             <ProgressBar />
         </StyledLink>

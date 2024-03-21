@@ -3,7 +3,9 @@ import UserPic from "../../static/img/UserPic.png"
 import Project from "components/Project";
 import { tg } from '../../static/constants'
 import { Link, useNavigate } from "react-router-dom";
-import { inherits } from "util";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../store/store';
 const StyledMain = styled.div`
     display: flex;
     flex-direction: column;
@@ -36,24 +38,44 @@ const StyledName = styled.p`
 `;
 
 const user_id = tg.initDataUnsafe.user?.id
-fetch(`https://backtest-6y6a.onrender.com/api/mymodels/?user_id=${user_id}`, {
-    method: 'GET'
-})
-    .then((response) => {
-        return response.json();
-    })
-    .then((data) => {
-        console.log("инфа от сервера: " + data);
-    });
+// fetch(`https://backtest-6y6a.onrender.com/api/mymodels/?user_id=${user_id}`, {
+//     method: 'GET'
+// })
+//     .then((response) => {
+//         return response.json();
+//     })
+//     .then((data) => {
+//         console.log("инфа от сервера: " + data);
+//     });
 
 
 const Main = () => {
-    tg.BackButton.hide();
-    const navigate = useNavigate();
-    tg.onEvent('backButtonClicked', () => navigate(-1))
-    console.log("init: " + tg.initData)
-    console.log("init: " + tg.initDataUnsafe.chat?.type)
-    console.log("start param: " + tg.initDataUnsafe.start_param)
+    const dispatch = useDispatch();
+    const { projects } = useSelector((state: RootState) => state.projects);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                dispatch({ type: 'FETCH_PROJECTS_REQUEST' });
+                const response = await fetch(`http://127.0.0.1:8000/api/projects/?user_id=${user_id}`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch projects');
+                }
+                const data = await response.json();
+                dispatch({ type: 'FETCH_PROJECTS_SUCCESS', payload: data });
+            } catch (error) {
+                dispatch({ type: 'FETCH_PROJECTS_FAILURE', payload: (error as Error).message });
+            }
+        };
+
+        fetchData();
+    }, [dispatch]);
+
+    // tg.BackButton.hide();
+    // const navigate = useNavigate();
+    // tg.onEvent('backButtonClicked', () => navigate(-1))
+    // console.log("init: " + tg.initData)
+    // console.log("init: " + tg.initDataUnsafe.chat?.type)
+    // console.log("start param: " + tg.initDataUnsafe.start_param)
     return (
         <StyledMain>
             <StyledAccount>
@@ -69,9 +91,7 @@ const Main = () => {
                 </svg>
             </StyledAccount>
             <StyledProjects>
-                <Project />
-                <Project />
-                <Project />
+                {projects.map((project) => <Project key={`project-${project.id}`} id={project.id} title={project.title} />)}
             </StyledProjects>
         </StyledMain>
     );
