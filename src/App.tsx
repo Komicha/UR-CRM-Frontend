@@ -1,26 +1,19 @@
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-import Main from "./pages/main";
-import ProjectTasks from "./pages/project-tasks";
-import Task from "./pages/task";
-import UserSelectionPage from "./pages/user-selection";
-import Layout from "components/Layout";
+import React from "react";
+import { Provider } from "react-redux";
+import { store } from "./store";
+import ProjectList from "./components/ProjectList";
+import TaskList from "./components/TaskList";
 
-
-
-
-function App() {
+const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/project-tasks" element={<ProjectTasks />} />
-          <Route path="/task" element={<Task />} />
-          <Route path="/user-selection" element={<UserSelectionPage />} />
-        </Routes>
-      </Layout>
-    </BrowserRouter>
+    <Provider store={store}>
+      <div>
+        <h1>Task Tracker</h1>
+        <ProjectList />
+        <TaskList />
+      </div>
+    </Provider>
   );
-}
+};
 
 export default App;
