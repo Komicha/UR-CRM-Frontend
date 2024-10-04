@@ -9,13 +9,13 @@ import { useLocation } from "react-router-dom";
 const StyledProjectWrapper = styled.div`
   display: flex;
   padding: 16px;
-  color: var(--tg-theme-text-color);
+  color: white;
 `;
 
 const StyledContainer = styled.header`
   display: flex;
   flex-direction: column;
-  background-color: var(--tg-theme-bg-color);
+  background-color: black;
   margin: 0px auto;
 `;
 
@@ -49,12 +49,8 @@ const StyledTaskFilterButton = styled.button<{ isActive?: boolean }>`
   width: 70px;
   height: 26px;
   border: none;
-  background-color: ${(props) =>
-    props.isActive ? "var(--tg-theme-secondary-bg-color)" : "transparent"};
-  color: ${(props) =>
-    props.isActive
-      ? "var(--tg-theme-accent-text-color)"
-      : "var(--tg-theme-text-color)"};
+  background-color: ${(props) => (props.isActive ? "black" : "transparent")};
+  color: ${(props) => (props.isActive ? "black" : "black")};
   font-size: 12px;
   border-radius: 10px;
 `;

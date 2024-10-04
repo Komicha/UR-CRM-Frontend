@@ -17,8 +17,8 @@ const StyledBtn = styled.button`
   width: 100%;
   border-radius: 6px;
   color: white;
-  background: var(--tg-theme-button-color);
-  color: var(--tg-theme-button-text-color);
+  background: black;
+  color: black);
   border: none;
 `;
 

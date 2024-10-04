@@ -8,8 +8,8 @@ const StyledContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: var(--tg-theme-bg-color);
-  color: var(--tg-theme-text-color);
+  background-color: black;
+  color: white;
   margin-top: 16px;
   border-radius: 12px;
   height: 453px;

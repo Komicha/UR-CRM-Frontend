@@ -27,11 +27,11 @@ const StyledUsernameWrapper = styled.div`
 
 const StyledUsernameTitle = styled.div`
   font-size: 12px;
-  color: var(--tg-theme-text-color);
+  color: white;
 `;
 
 const StyledUsername = styled.div`
-  color: var(--tg-theme-hint-color);
+  color: white;
   font-size: 8px;
 `;
 

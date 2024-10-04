@@ -25,13 +25,13 @@ const handleDotsState = (state: string) => {
 const StyledContainer = styled.div`
   height: 136px;
   width: 100%;
-  background-color: var(--tg-theme-bg-color);
+  background-color: black;
   border-radius: 8px;
   margin-top: 16px;
-  border-left: 8px solid var(--tg-theme-text-color);
+  border-left: 8px solid black;
   padding: 16px;
   box-sizing: border-box;
-  color: var(--tg-theme-text-color);
+  color: white;
 `;
 
 const StyledTitleWrapper = styled.div`
@@ -73,7 +73,7 @@ const StyledInfo = styled.div`
   display: flex;
   align-items: center;
   font-size: 12px;
-  color: var(--tg-theme-hint-color);
+  color: white;
 `;
 
 const StyledArrow = styled.div`
